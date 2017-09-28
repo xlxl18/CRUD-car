@@ -8,6 +8,13 @@ import java.util.List;
 
 public class CarSimpleDAO implements CarDAO {
         private final List<Car> cars = new ArrayList<Car>();
+
+        public CarSimpleDAO() {
+            Car car1 = new Car("Toyota", "Camry","062KUA01");
+            Car car2 = new Car("Lexus", "ES300","062KUA03");
+            Car car3 = new Car("Volkswagen", "Polo","062KUA05");
+        }
+
     @Override
     public Long addCar(Car car) {
         Long id=generateCarId();
@@ -46,7 +53,7 @@ public class CarSimpleDAO implements CarDAO {
     }
 
     @Override
-    public List<Car> fingCars() {
+    public List<Car> findCars() {
         return cars;
     }
 

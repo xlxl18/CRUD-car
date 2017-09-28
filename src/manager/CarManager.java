@@ -3,9 +3,11 @@ import dao.CarDAO;
 import dao.CarDAOFactory;
 import  entity.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarManager {
+    private List<Car> cars=new ArrayList<>();
     private CarDAO carDAO;
 
     public CarManager() {
@@ -29,6 +31,6 @@ public class CarManager {
     }
 
     public List<Car> findCars() {
-        return carDAO.fingCars();
+        return carDAO.findCars();
     }
 }

@@ -9,7 +9,7 @@ public interface CarDAO {
     public void deleteCar(Long carId);
     public Car getCar(Long carId);
 
-    public List<Car> fingCars();
+    public List<Car> findCars();
 
 
 }
